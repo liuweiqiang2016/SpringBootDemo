@@ -33,5 +33,8 @@ spring:
                     url: jdbc:postgresql://192.168.22.82:5432/my_db?useUnicode=true&useSSL=false
                     username: postgres
                     password: 123456
-
-
+                orcldb:
+                    driver-class-name: oracle.jdbc.OracleDriver
+                    url: jdbc:oracle:thin:@//192.168.22.82:1521/ORCL
+                    username: system
+                    password: 123456

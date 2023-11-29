@@ -13,7 +13,7 @@ public class Grade {
     private String pId;
     @TableField("score")
     private int score;
-    @TableField("level")
+    @TableField("lv")
     private String level;
 
     public int getId() {

@@ -8,6 +8,6 @@ import org.apache.ibatis.annotations.Param;
 
 @Mapper
 public interface GradeMapper extends BaseMapper<Grade> {
-    @Insert("insert into grade(p_id,score,level) values ( #{grade.pId},#{grade.score},#{grade.level})")
+    @Insert("insert into grade(p_id,score,lv) values ( #{grade.pId},#{grade.score},#{grade.level})")
     public void insertGrade(@Param("grade")Grade grade);
 }

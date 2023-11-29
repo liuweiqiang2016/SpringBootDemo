@@ -2,6 +2,7 @@ package com.zdxlz.lwq.controller;
 
 import com.zdxlz.lwq.enity.User;
 import com.zdxlz.lwq.service.GradeService;
+import com.zdxlz.lwq.service.OrclService;
 import com.zdxlz.lwq.service.OrderService;
 import com.zdxlz.lwq.service.PgService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,8 @@ public class MyController {
     private OrderService orderService;
     @Autowired
     private PgService pgService;
+    @Autowired
+    private OrclService orclService;
 
    @GetMapping("test")
     public String helloWorld(){
@@ -74,6 +77,25 @@ public class MyController {
         pgService.deleteMsgByMap(key,value);
         return "pg 删除一组成绩:"+new Date();
     }
+
+
+    @PostMapping("insertOrcl")
+    public String insertOrcl(String p_id,int score,String level){
+        orclService.insertMsg(p_id,score,level);
+        return "Oracle 数据库插入成绩:"+new Date();
+    }
+
+    @PostMapping("deleteOrclByID")
+    public String deleteOrclByID(int id){
+        orclService.deleteMsgByID(id);
+        return "Oracle 删除成绩:"+new Date();
+    }
+    @PostMapping("deleteOrclByMap")
+    public String deleteOrclByMap(String key,String value){
+        orclService.deleteMsgByMap(key,value);
+        return "Oracle 删除一组成绩:"+new Date();
+    }
+
 
     @PostMapping("insertDB1")
     public String insertDB1(int price,int user_id){
