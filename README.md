@@ -7,5 +7,5 @@
 - 支持 MySQL、PostgreSQL、Oracle 数据库的使用
 
 详细开发文档参阅：
-https://docs.dingtalk.com/i/nodes/amweZ92PV6BKPKjBTzopbXr1VxEKBD6p
-https://docs.dingtalk.com/i/nodes/KGZLxjv9VGB5n5yBTEpeN7arW6EDybno
+https://blog.csdn.net/ch1451082329/article/details/134640444 
+https://blog.csdn.net/ch1451082329/article/details/134640493
